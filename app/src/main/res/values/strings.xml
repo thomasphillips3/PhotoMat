@@ -3,4 +3,10 @@
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
     <string name="back4app_app_id">O2UhshjU5qQu2GGeRVNgdh8A7S4UJkM3EmarKxbT</string>
     <string name="back4app_client_key">YkyMrMoaEyBwPRaCmoav19QvGnjjAaxVE6t79bjc</string>
+    <string name="photomat_icon">Photomat icon</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_password">Enter password</string>
 </resources>
