@@ -22,14 +22,14 @@
         app:srcCompat="@drawable/photomat_icon_color"/>
 
     <EditText
-        android:id="@+id/textEmailLogin"
+        android:id="@+id/textUsernameLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/enter_email_address"
-        android:inputType="textEmailAddress"
+        android:hint="@string/enter_username"
+        android:inputType="textNoSuggestions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photomatLogo"/>
@@ -45,7 +45,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmailLogin"/>
+        app:layout_constraintTop_toBottomOf="@+id/textUsernameLogin"/>
     <Button
         android:id="@+id/buttonSignUpLogin"
         android:layout_width="284dp"

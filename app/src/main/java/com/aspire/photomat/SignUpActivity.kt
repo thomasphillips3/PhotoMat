@@ -25,6 +25,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                     } else {
                         Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
                     }
+                    textPassword.text.clear()
                 }
             }
             R.id.buttonLogin -> {
@@ -48,5 +49,9 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
         signUpButton.setOnClickListener(this)
         loginButton.setOnClickListener(this)
+
+        if (ParseUser.getCurrentUser() != null) {
+            ParseUser.logOut()
+        }
     }
 }
