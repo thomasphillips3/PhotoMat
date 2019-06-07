@@ -1,5 +1,6 @@
 package com.aspire.photomat
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -19,6 +20,10 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                 appUser.username = textUsername.text.toString()
                 appUser.setPassword(textPassword.text.toString())
 
+                val progressDialog = ProgressDialog(this)
+                progressDialog.setMessage("Signing up " + appUser.username.toString())
+                progressDialog.show()
+
                 appUser.signUpInBackground { e ->
                     if (e == null) {
                         Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
@@ -26,6 +31,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                         Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
                     }
                     textPassword.text.clear()
+                    progressDialog.dismiss()
                 }
             }
             R.id.buttonLogin -> {
